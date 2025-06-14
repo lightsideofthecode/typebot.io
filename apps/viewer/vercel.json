@@ -11,5 +11,17 @@
   },
   "github": {
     "silent": true
-  }
+  },
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "methods": ["GET", "POST", "OPTIONS", "PUT", "PATCH", "DELETE"],
+      "headers": {
+        "Access-Control-Allow-Origin": "https://nex-typebot-builder.vercel.app",
+        "Access-Control-Allow-Methods": "GET,POST,OPTIONS,PUT,PATCH,DELETE",
+        "Access-Control-Allow-Headers": "Content-Type, Authorization",
+        "Access-Control-Allow-Credentials": "true"
+      }
+    }
+  ]
 }
